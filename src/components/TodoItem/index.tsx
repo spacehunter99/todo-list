@@ -16,13 +16,15 @@ const TodoItem: React.FC<TodoItemProps> = ({ id, title, isCompleted }) => {
     <li className={isCompleted ? "li-item checked" : "li-item"}>
       <div className="task-container">
         <div className="checkbox-and-title-container">
-          <input
-            className="rounded-checkbox"
-            id="todo-checkbox"
-            type="checkbox"
-            checked={isCompleted}
-            onChange={() => dispatch(toggleIsComplete(id))}
-          />
+          <div>
+            <input
+              className="rounded-checkbox"
+              id="todo-checkbox"
+              type="checkbox"
+              checked={isCompleted}
+              onChange={() => dispatch(toggleIsComplete(id))}
+            />
+          </div>
           <div className="task-title">{title}</div>
         </div>
         <div onClick={() => dispatch(deleteTodo(id))}>

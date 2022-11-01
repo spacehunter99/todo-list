@@ -8,6 +8,7 @@
   .checkbox-and-title-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     .rounded-checkbox {
       width: 20px;
@@ -26,6 +27,7 @@
       clip-path: circle(50% at 50% 50%);
       background-color: #66bb6a;
       appearance: auto;
+      -webkit-appearance: auto;
     }
 
     .task-title {
