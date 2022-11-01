@@ -1,6 +1,5 @@
-import React from "react";
 import "./style.scss";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useAppDispatch } from "../../utils/hooks";
 import { addTodo } from "../../store/todoSlice";
 
@@ -11,7 +10,8 @@ const App: React.FC = () => {
   const [inputText, setInputText] = useState("");
   const dispatch = useAppDispatch();
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (event: React.FormEvent<HTMLElement>) => {
+    event.preventDefault();
     if (inputText.trim().length > 0) {
       dispatch(addTodo(inputText));
       setInputText("");

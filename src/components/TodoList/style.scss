@@ -1,3 +1,106 @@
-.todos-container-list {
-  list-style-type: none;
+.todos-container {
+  width: 512px;
+  margin-top: 3px;
+  background-color: white;
+  box-shadow: 2px 1px 5px #999999;
+
+  .todos-container-list {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+
+    .empty-list-figure {
+      padding-left: 12px;
+    }
+  }
+
+  .bottom-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+    font-size: 15px;
+
+    .bottom-panel-left {
+      padding-left: 10px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .bottom-panel-central {
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      .all-button,
+      .active-button,
+      .completed-button {
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0 5px;
+      }
+    }
+
+    .bottom-panel-right {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-right: 10px;
+
+      .clear-completed-button {
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:active {
+          border: 1px solid lightgray;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .todos-container {
+    width: 330px;
+
+    .bottom-panel {
+      flex-direction: column;
+
+      .bottom-panel-left {
+        padding-left: 0px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+
+      .bottom-panel-central {
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+        .all-button,
+        .active-button,
+        .completed-button {
+          padding: 0;
+          border: none;
+          font: inherit;
+          color: inherit;
+          background-color: transparent;
+          cursor: pointer;
+          padding: 0 5px;
+        }
+      }
+
+      .bottom-panel-right {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 0px;
+      }
+    }
+  }
 }

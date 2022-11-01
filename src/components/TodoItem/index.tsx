@@ -13,20 +13,26 @@ const TodoItem: React.FC<TodoItemProps> = ({ id, title, isCompleted }) => {
   const dispatch = useAppDispatch();
 
   return (
-    <li className={isCompleted ? "checked" : ""}>
-      <input
-        type="checkbox"
-        checked={isCompleted}
-        onChange={() => dispatch(toggleIsComplete(id))}
-      />
-      <span>{title}</span>
-      <span onClick={() => dispatch(deleteTodo(id))}>
-        <img
-          className="delete-button-icon"
-          src="./img/delete-button.png"
-          alt="delete button"
-        />
-      </span>
+    <li className={isCompleted ? "li-item checked" : "li-item"}>
+      <div className="task-container">
+        <div className="checkbox-and-title-container">
+          <input
+            className="rounded-checkbox"
+            id="todo-checkbox"
+            type="checkbox"
+            checked={isCompleted}
+            onChange={() => dispatch(toggleIsComplete(id))}
+          />
+          <div className="task-title">{title}</div>
+        </div>
+        <div onClick={() => dispatch(deleteTodo(id))}>
+          <img
+            className="delete-button-icon"
+            src="./img/delete-button.png"
+            alt="delete button"
+          />
+        </div>
+      </div>
     </li>
   );
 };

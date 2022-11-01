@@ -42,14 +42,37 @@ const TodoList: React.FC = () => {
 
   return (
     <div className="todos-container">
-      <ul className="todos-container-list">{mappedTodos}</ul>
-      <span>{activeTodosCounter} active items left</span>
-      <button onClick={() => todoFilter("all")}>All</button>
-      <button onClick={() => todoFilter(false)}>Active</button>
-      <button onClick={() => todoFilter(true)}>Completed</button>
-      <button onClick={() => dispatch(removeCompletedTodos())}>
-        Clear completed
-      </button>
+      <ul className="todos-container-list">
+        {mappedTodos.length > 0 ? (
+          mappedTodos
+        ) : (
+          <p className="empty-list-figure">list is empty</p>
+        )}
+      </ul>
+      <div className="bottom-panel">
+        <div className="bottom-panel-left">
+          {activeTodosCounter} active items left
+        </div>
+        <div className="bottom-panel-central">
+          <button className="all-button" onClick={() => todoFilter("all")}>
+            All
+          </button>
+          <button className="active-button" onClick={() => todoFilter(false)}>
+            Active
+          </button>
+          <button className="completed-button" onClick={() => todoFilter(true)}>
+            Completed
+          </button>
+        </div>
+        <div className="bottom-panel-right">
+          <button
+            className="clear-completed-button"
+            onClick={() => dispatch(removeCompletedTodos())}
+          >
+            Clear completed
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

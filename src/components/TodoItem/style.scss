@@ -1,8 +1,50 @@
-.checked {
-  text-decoration: line-through;
+.task-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0px;
+
+  .checkbox-and-title-container {
+    display: flex;
+    flex-direction: row;
+
+    .rounded-checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 1px solid grey;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+      cursor: pointer;
+      margin-left: 12px;
+    }
+
+    .rounded-checkbox:checked {
+      clip-path: circle(50% at 50% 50%);
+      background-color: #66bb6a;
+      appearance: auto;
+    }
+
+    .task-title {
+      padding-left: 8px;
+    }
+  }
+
+  .delete-button-icon {
+    width: 15px;
+    cursor: pointer;
+    margin-right: 12px;
+  }
 }
 
-.delete-button-icon {
-  width: 15px;
-  cursor: pointer;
+.li-item {
+  border-top: 1px solid lightgray;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: lightgray;
 }
