@@ -24,10 +24,19 @@
     }
 
     .rounded-checkbox:checked {
+      position: relative;
       clip-path: circle(50% at 50% 50%);
       background-color: #66bb6a;
-      appearance: auto;
-      -webkit-appearance: auto;
+      appearance: icon;
+      -webkit-appearance: icon;
+
+      &::before {
+        content: "✓";
+        color: white;
+        position: absolute;
+        left: 3px;
+        font-weight: 900;
+      }
     }
 
     .task-title {
