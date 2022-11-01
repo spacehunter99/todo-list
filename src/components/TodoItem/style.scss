@@ -27,8 +27,8 @@
       position: relative;
       clip-path: circle(50% at 50% 50%);
       background-color: #66bb6a;
-      appearance: icon;
-      -webkit-appearance: icon;
+      appearance: none;
+      -webkit-appearance: none;
 
       &::before {
         content: "✓";
