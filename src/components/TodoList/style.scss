@@ -89,13 +89,30 @@
         .all-button,
         .active-button,
         .completed-button {
-          padding: 0;
           border: none;
+          border-radius: 10px;
           font: inherit;
           color: inherit;
-          background-color: transparent;
           cursor: pointer;
-          padding: 0 5px;
+          margin: 0 5px;
+          padding: 3px 10px;
+          background-color: lightgreen;
+          box-shadow: 0px 1px 3px #999999;
+        }
+
+        .all-button {
+          color: rgb(87, 85, 85);
+          background-color: transparent;
+        }
+
+        .active-button {
+          color: white;
+          background-color: rgb(79, 145, 167);
+        }
+
+        .completed-button {
+          color: rgb(87, 85, 85);
+          background-color: rgb(126, 223, 126);
         }
       }
 
@@ -103,6 +120,14 @@
         padding-top: 7px;
         padding-bottom: 7px;
         padding-right: 0px;
+        border-radius: 10px;
+        padding: 3px 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        // color: rgb(87, 85, 85);
+        color: white;
+        background-color: rgb(255, 68, 68);
+        box-shadow: 0px 1px 3px #999999;
       }
     }
   }
