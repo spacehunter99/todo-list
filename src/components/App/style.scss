@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
 .main-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -5,4 +7,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  .main-header {
+    font-family: "Quicksand", sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    color: rgb(211, 172, 172);
+  }
 }

@@ -20,7 +20,7 @@ const App: React.FC = () => {
 
   return (
     <div className="main-container">
-      <h1>todos</h1>
+      <h1 className="main-header">todos</h1>
       <TodoInputForm
         inputText={inputText}
         updateInputText={setInputText}
