@@ -1,10 +1,25 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todoSlice from "./todoSlice";
+import storage from "redux-persist/lib/storage";
+import { combineReducers } from "redux";
+import { persistReducer } from "redux-persist";
+import thunk from "redux-thunk";
+
+import todoReducer from "./todoSlice";
+
+const reducers = combineReducers({
+  todos: todoReducer,
+});
+
+const persistConfig = {
+  key: "root",
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, reducers);
 
 const store = configureStore({
-  reducer: {
-    todos: todoSlice,
-  },
+  reducer: persistedReducer,
+  middleware: [thunk],
 });
 
 export default store;
