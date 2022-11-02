@@ -3,6 +3,8 @@
   justify-content: row;
   background-color: white;
   box-shadow: 2px 1px 5px #999999;
+  appearance: none;
+  -webkit-appearance: none;
 
   .todos-form-input {
     width: 458px;
