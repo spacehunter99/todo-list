@@ -4,10 +4,11 @@
   height: 40px;
   background-color: white;
   box-shadow: 2px 1px 5px #999999;
+  margin-bottom: 1px;
 
   .todos-form-input {
     width: 458px;
-    height: 100%;
+    // height: 100%;
     outline: none;
     padding-left: 12px;
     border: none;
@@ -19,7 +20,6 @@
   .todos-form-button {
     height: 100%;
     width: 40px;
-    padding: 0;
     border: none;
     font: inherit;
     color: inherit;
