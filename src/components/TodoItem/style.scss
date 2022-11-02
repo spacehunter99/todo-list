@@ -31,11 +31,11 @@
       -webkit-appearance: none;
 
       &::before {
-        content: "✓";
+        content: "✔";
         color: white;
         position: absolute;
-        left: 3px;
-        font-weight: 900;
+        left: 4px;
+        // font-weight: 1000;
       }
     }
 
