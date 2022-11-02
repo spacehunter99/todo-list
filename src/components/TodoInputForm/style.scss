@@ -1,14 +1,13 @@
 .todos-form {
   display: flex;
   justify-content: row;
+  height: 40px;
   background-color: white;
   box-shadow: 2px 1px 5px #999999;
-  appearance: none;
-  -webkit-appearance: none;
 
   .todos-form-input {
     width: 458px;
-    height: 35px;
+    height: 100%;
     outline: none;
     padding-left: 12px;
     border: none;
@@ -18,7 +17,7 @@
   }
 
   .todos-form-button {
-    height: auto;
+    height: 100%;
     width: 40px;
     padding: 0;
     border: none;
